@@ -10,5 +10,5 @@
 Run the following command to enable Nginx ingress controller and Tyk services ingresses.
 ```
 minikube addons enable ingress
-helm install tyk-pro tyk-helm/tyk-pro -f ./values.yaml -f ./integrations/minikube/enable-tyk-nginx-ingresses.yaml -n tyk --wait
+helm install tyk-pro tyk-helm/tyk-pro -f ./values.yaml -f ./integrations/minikube/values.yaml -n tyk --wait
 ```
