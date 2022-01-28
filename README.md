@@ -12,6 +12,7 @@ helm repo update
 
 3. Create `tyk` namespace and install Redis and Mongo dependecies
 ```
+kubectl create ns tyk
 helm install redis tyk-helm/simple-redis -n tyk
 helm install mongo tyk-helm/simple-mongodb -n tyk
 ```
