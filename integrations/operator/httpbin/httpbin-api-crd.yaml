@@ -1,3 +1,4 @@
+---
 apiVersion: tyk.tyk.io/v1alpha1
 kind: ApiDefinition
 metadata:
@@ -8,6 +9,6 @@ spec:
   protocol: http
   active: true
   proxy:
-    target_url: http://httpbin.org
+    target_url: http://httpbin.services.svc.cluster.local:8000
     listen_path: /httpbin/
     strip_listen_path: true
