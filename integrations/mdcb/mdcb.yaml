@@ -1,0 +1,22 @@
+## Default values for tyk-pro chart.
+## This is a YAML-formatted file.
+## Declare variables to be passed into your templates.
+## See Tyk Helm documentation for installation details:
+## https://tyk.io/docs/tyk-self-managed/tyk-helm-chart/
+## Registry for all Tyk images - https://hub.docker.com/u/tykio
+
+mdcb:
+  # Determines whither or not the mdcb component should be installed.
+  enabled: true
+  # If set to true the MDCB will use SSL connection.
+  # You will also need to set the:
+  # - TYK_MDCB_SERVEROPTIONS_CERTIFICATE_CERTFILE
+  # - TYK_MDCB_SERVEROPTIONS_CERTIFICATE_KEYFILE
+  # variables in extraEnvs object array to define your SSL cert and key files.
+  tls: false
+  # Sets the port of the health endpoint.
+  healthcheckport: 8181
+  # When true. Instead of sending analytics directly to MongoDB, MDCB can send
+  # analytics to Redis. This will allow tyk-pump to pull analytics from Redis
+  # and send to your own data sinks.
+  forwardAnalyticsToPump: true
