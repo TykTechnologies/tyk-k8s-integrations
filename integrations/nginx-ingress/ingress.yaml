@@ -7,7 +7,7 @@
 
 dash:
   # The hostname to bind the Dashboard to.
-  hostName: tyk-dashboard.gke
+  hostName: tyk-dashboard.local
   # If set to true the Dashboard will use SSL connection.
   # You will also need to set the:
   # - TYK_DB_SERVEROPTIONS_CERTIFICATE_CERTFILE
@@ -16,18 +16,18 @@ dash:
   tls: false
   org:
     # The hostname to bind the Portal to.
-    cname: tyk-portal.gke
+    cname: tyk-portal.local
   ingress:
     enabled: true
     annotations:
       kubernetes.io/ingress.class: nginx
     path: /
     hosts:
-      - tyk-dashboard.gke
+      - tyk-dashboard.local
     tls: []
     #  - secretName: chart-example-tls
     #    hosts:
-    #      - chart-example.gke
+    #      - chart-example.ingress
 
 portal:
   path: /
@@ -38,15 +38,15 @@ portal:
     annotations:
       kubernetes.io/ingress.class: nginx
     hosts:
-      - tyk-portal.gke
+      - tyk-portal.local
     tls: []
     #  - secretName: chart-example-tls
     #    hosts:
-    #      - chart-example.gke
+    #      - chart-example.ingress
 
 gateway:
   # The hostname to bind the Gateway to.
-  hostName: tyk-gw.gke
+  hostName: tyk-gw.local
   # When true, sets the gateway protocol to HTTPS.
   tls: false
   # Creates an ingress object in k8s. Will require an ingress-controller and
@@ -58,8 +58,8 @@ gateway:
       # kubernetes.io/tls-acme: "true"
     path: /
     hosts:
-      - tyk-gw.gke
+      - tyk-gw.local
     tls: []
     #  - secretName: chart-example-tls
     #    hosts:
-    #      - chart-example.gke
+    #      - chart-example.ingress
