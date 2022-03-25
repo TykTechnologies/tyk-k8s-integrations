@@ -1,0 +1,44 @@
+## Default values for tyk-pro chart.
+## This is a YAML-formatted file.
+## Declare variables to be passed into your templates.
+## See Tyk Helm documentation for installation details:
+## https://tyk.io/docs/tyk-self-managed/tyk-helm-chart/
+## Registry for all Tyk images - https://hub.docker.com/u/tykio
+
+dash:
+  # If set to true the Dashboard will use SSL connection.
+  tls: true
+  # Set you certs here if you want to enable TLS.
+  # - name: dashboard-cert
+  #   certSecret: dashboard-cert
+  #   certFilename: dashboard-crt.pem
+  #   keySecret: dashboard-key
+  #   keyFilename: dashboard-key.pem
+  certificates:
+    - name: tyk.local-cert
+      certSecret: tyk.local.secret
+      certFilename: tyk.local.crt
+      keySecret: tyk.local.secret
+      keyFilename: tyk.local.key
+  extraEnvs:
+    - name: TYK_DB_HTTPSERVEROPTIONS_SSLINSECURESKIPVERIFY
+      value: "true"
+
+gateway:
+  # When true, sets the gateway protocol to HTTPS.
+  tls: true
+  # Set you certs here if you want to enable TLS.
+  # - name: gateway-cert
+  #   certSecret: gateway-cert
+  #   certFilename: gateway-crt.pem
+  #   keySecret: gateway-key
+  #   keyFilename: gateway-key.pem
+  certificates:
+    - name: tyk.local-cert
+      certSecret: tyk.local.secret
+      certFilename: tyk.local.crt
+      keySecret: tyk.local.secret
+      keyFilename: tyk.local.key
+  extraEnvs:
+    - name: TYK_GW_HTTPSERVEROPTIONS_SSLINSECURESKIPVERIFY
+      value: "true"

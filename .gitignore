@@ -1,3 +1,8 @@
 /values.yaml
 /integrations/mdcb/hybrid.yaml
+**/tyk.local.secret.yaml
 **/.DS_Store
+**/certs/*.crt
+**/certs/*.csr
+**/certs/*.key
+**/certs/*.pem

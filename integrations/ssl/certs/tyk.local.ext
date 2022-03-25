@@ -1,0 +1,11 @@
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+extendedKeyUsage=serverAuth,clientAuth
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = tyk.local
+DNS.2 = dashboard.tyk.local
+DNS.3 = gateway.tyk.local
+DNS.4 = dashboard-svc-tyk-pro.tyk
+DNS.5 = gateway-svc-tyk-pro.tyk
