@@ -20,3 +20,12 @@ helm install mongo tyk-helm/simple-mongodb -n tyk
 4. Install Tyk: `helm install tyk-pro tyk-helm/tyk-pro -f ./values.yaml -n tyk --wait`
 
 For more information on the Tyk Helm Charts please visit our [tyk-helm-chart](https://github.com/TykTechnologies/tyk-helm-chart) Github repository or our official [Tyk Helm Chart](https://tyk.io/docs/tyk-self-managed/tyk-helm-chart/) documentation.
+
+## Integrations
+- Multi Data Centre Bridge `integrations/mdcb`
+- MiniKube `integrations/minikube`
+- Nginx Ingress Controller `integrations/nginx-ingress`
+- Operator `integrations/operator`
+    - **Examples of CRDs** `/example-crds`
+    - **httpbin service and API CRD** `/httpbin`
+- SSL `integrations/ssl`
