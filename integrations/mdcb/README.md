@@ -8,7 +8,9 @@ helm install tyk-nginx nginx-stable/nginx-ingress
 ```
 
 ## Getting Started
-1. Install `Control Plane` using helm:
+1. Add the MDCB license to the root `values.yaml`
+
+2. Install `Control Plane` using helm:
 
 `Without ingresses`:
 ```
@@ -20,13 +22,13 @@ helm install tyk-pro tyk-helm/tyk-pro -f ./values.yaml -f ./integrations/mdcb/md
 helm install tyk-pro tyk-helm/tyk-pro -f ./values.yaml -f ./integrations/mdcb/mdcb.yaml -f ./integrations/nginx-ingress/ingress.yaml -n tyk --wait
 ```
 
-2. Follow this [documentation](https://tyk.io/docs/tyk-multi-data-centre/setup-master-data-centre/#gateway-config) to enable hybrid options on your organasation.
+3. Follow this [documentation](https://tyk.io/docs/tyk-multi-data-centre/setup-master-data-centre/#gateway-config) to enable hybrid options on your organasation.
 
-3. Copy for `hybrid.yaml.example` to `hybrid.yaml`
+4. Copy for `hybrid.yaml.example` to `hybrid.yaml`
 
 `cp ./integrations/mdcb/hybrid.yaml.example ./integrations/mdcb/hybrid.yaml`
 
-4. Update the `hybrid.yaml`:
+5. Update the `hybrid.yaml`:
 
 ```
 Organisation ID                       > gateway.rpc.rpcKey
