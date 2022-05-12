@@ -9,7 +9,7 @@ spec:
   active: true
   proxy:
     target_url: http://httpbin.org
-    listen_path: /httpbin/
+    listen_path: /authToken/
     strip_listen_path: true
   use_standard_auth: true
   auth_configs:

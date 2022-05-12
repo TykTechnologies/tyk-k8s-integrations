@@ -12,8 +12,8 @@ kubectl create ns services
 kubectl apply -f integrations/operator/httpbin/httpbin-svc.yaml -n services
 ```
 
-3. Apply  `httpbin-api-crd.yaml` to create Tyk httpbin API
+3. Apply  `httpbin-api.yaml` to create Tyk httpbin API
 
 ```
-kubectl apply -f integrations/operator/httpbin/httpbin-api-crd.yaml -n services
+kubectl apply -f integrations/operator/httpbin/httpbin-api.yaml -n services
 ```
