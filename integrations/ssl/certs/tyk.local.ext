@@ -9,3 +9,4 @@ DNS.2 = dashboard.tyk.local
 DNS.3 = gateway.tyk.local
 DNS.4 = dashboard-svc-tyk-pro.tyk
 DNS.5 = gateway-svc-tyk-pro.tyk
+DNS.6 = dashboard-svc-tyk-pro.tyk.svc.cluster.local
